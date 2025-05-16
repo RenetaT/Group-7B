@@ -30,7 +30,10 @@ In order for a client to request a resource for example the client is requesting
                self.end_headers()
                self.wfile.write(json.dumps(subjects, indent = 2).encode('utf-8'))
 
- Upon the client sending a http request to the server, the class S is triggered in the backend due to the http request being a GET request. The http request is sent to a specific endpoint exposed by the server, the urlparse function is called to parse the request path `urlparse(self.path)`. A check is done on the request to see if it specifically for the specific endpoint. If this condition passes: `if self.path == '/subjects'` then the server process to handle with the request, in this case the backend function is called for example for /subjects, the fetchSubjects() function would be called.
+
+
+
+Upon the client sending a http request to the server, the class S is triggered in the backend due to the http request being a GET request. The http request is sent to a specific endpoint exposed by the server, the urlparse function is called to parse the request path `urlparse(self.path)`. A check is done on the request to see if it specifically for the specific endpoint. If this condition passes: `if self.path == '/subjects'` then the server process to handle with the request, in this case the backend function is called for example for /subjects, the fetchSubjects() function would be called.
 
 
 fetchSubjects:
