@@ -17,8 +17,7 @@ How does our application work:
 
 In order for a client to request a resource for example the client is requesting subjects, a http request would be made to the server to a specific endpoint. A function in the backend is called based on the specific endpoint which fetches data from the PostgreSQL database. Due to the way our project is implemented, there has to be a bridge between the PostgreSQL database and the Python backend. We decided to use Pyscopg2 which is a PostgreSQL adapter for Python which provides developers with detailed control over SQL queries and database interactions. Psycopg2 is required to establish database connections, execute SQL queries, handle transactions and fetch and process data. Without it, the server would be unable to respond to http requests sent via the frontend. There would be no database connection between the backend and the database. 
 
-`
-class S:
+`class S:
 def do_GET(self):
         parsed_path = urlparse(self.path)
         if self.path == '/subjects':
@@ -27,18 +26,15 @@ def do_GET(self):
             self.send_header('Access-Control-Allow-Origin', '*')  # Allow all origins
             self.send_header('Content-type','application/json')
             self.end_headers()
-            self.wfile.write(json.dumps(subjects, indent = 2).encode('utf-8'))
-`
+            self.wfile.write(json.dumps(subjects, indent = 2).encode('utf-8')) `
 
  Upon the client sending a http request to the server, the class S is triggered in the backend due to the http request being a GET request. The http request is sent to a specific endpoint exposed by the server, the urlparse function is called to parse the request path `urlparse(self.path)`. A check is done on the request to see if it specifically for the specific endpoint. If this condition passes: `if self.path == '/subjects'` then the server process to handle with the request, in this case the backend function is called for example for /subjects, the fetchSubjects() function would be called.
 
 
 fetchSubjects:
------------------
+^^^^^^^^^^^^^^^
 
-`
-# fetching subjects function, called in the S class to be used by frontend
-def fetchSubjects():
+`def fetchSubjects():
     conn = None
     cur = None
     subjects = []
@@ -61,8 +57,7 @@ def fetchSubjects():
         if conn is not None:
             connection_pool.putconn(conn)
     
-    return subjects
-`
+    return subjects `
 
 
 The fetchSubjects gets a connection from the connection pool (group of pre-established connections), creates a cursor to execute the SQL query, fetches the results via cur.fetchall(). a list comprehension is used where the rows are processed in a list of dictionaries and finally after the results have been fetched and placed in an array, the connection borrowed from the connection pool is returned for efficient database connection handling and to save resources etc. The fetchSubjects function returns a list of dictionaries. 
