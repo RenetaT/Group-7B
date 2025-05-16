@@ -1,5 +1,5 @@
 Welcome to Learning App documentation!
-===================================
+======================================
 
 We are developing a learning application that will enhance students' educational 
 experiences by providing a more efficient and personalised system tailored to their needs.
