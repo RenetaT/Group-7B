@@ -1,34 +1,26 @@
 Usage
 =====
 
-.. _installation:
+This section explains how to set up your development environment and run the Learning App locally.
 
-Installation
-------------
+Setting Up the Development Environment
+--------------------------------------
 
-To use Lumache, first install it using pip:
+Follow these steps to prepare your machine:
 
-.. code-block:: console
+1. **Install Flutter**  
+   Follow the instructions on `flutter.dev <https://flutter.dev/docs/get-started/install>`_ to install the Flutter SDK.
 
-   (.venv) $ pip install lumache
+2. **Install Python**  
+   Make sure you have Python 3.x installed. You can download it from `python.org <https://www.python.org/downloads/>`_.
 
-Creating recipes
-----------------
+3. **Install PostgreSQL**  
+   Download and install PostgreSQL from `postgresql.org <https://www.postgresql.org/download/>`_.  
+   After installation, create a new database for the project and verify that your `config.py` contains the correct connection settings.
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+Running the Backend
+-------------------
 
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+1. **Navigate to the backend directory**  
+   ```bash
+   cd backend
