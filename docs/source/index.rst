@@ -18,8 +18,9 @@ Contents
 
 .. toctree::
 
+   introduction
    usage
    api
    database_model
-   introduction
+   
 
