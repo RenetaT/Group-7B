@@ -36,4 +36,15 @@ Components In Use:
 
 - Register Account: The register account component is responsible for inserting a new account the user has made into the database provided that user_name, user_last_name, user_email and user_password fields are all filled in. The createAccount() backend function is used which inserts a new record into the users table in the database which holds all the existing user accounts.
 
-- Account Authenticator: The account authenticator verifies whether the user's credentials are correct or not and whether an account exists under a certain email address; it uses the loginUser() backend function
+- Account Authenticator: The account authenticator verifies whether the user's credentials are correct or not and whether an account exists under a certain email address; it uses the loginUser() backend function.
+
+
+Benefits of chosen architecture:
+--------------------------------
+
+Our chosen software architecture makes our learning application scalabale meaning the server can handle multiple clients simultaneously and scale as needed. Moveover, all data is managed and processed by the server so there is centeralised management. In addition, due to the fact that multiple clients can connect to the server, the logic written in the server side code can be reused across multiple other clients whether that is on a mobile phone or web applications etc.
+
+
+Conclusion:
+-------------
+Overall, the server is the backbone of the application and comprises of multiple components each serving a specific purpose, handling all database interactions, application logic and API endpoints. The client focuses on the user interaction and deals and sends http requests to the server. There is a clear seperation between the two which ultimately ensures an easy to understand and scalable design which makes it easier to maintain the application as well as even expanding on it.
