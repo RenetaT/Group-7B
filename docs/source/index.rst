@@ -22,5 +22,6 @@ Contents
    usage
    api
    database_model
+   system_architecture.rst
    
 
