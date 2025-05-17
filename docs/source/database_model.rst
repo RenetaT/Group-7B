@@ -1,12 +1,14 @@
 Database Model
 ==============
 
-This learning application's database schema is designed to organize and handle data related to users, subjects, topics, quizzes, questions, results, and rewards.
+This learning application's database schema is designed to organise and handle data related to users, subjects, topics, quizzes, questions, results, and rewards.
 
 Entity-Relationship Diagram (ERD)
 ---------------------------------
-link :
-https://app.diagrams.net/#G1xh_K94tQJBBiNvQwiQV4ebWRCBj-GVoO#%7B%22pageId%22%3A%22eB-IHovhO6KBxCCwhGGL%22%7D
+.. image:: https://raw.githubusercontent.com/RenetaT/Group-7B/main/docs/images/ERD%20(1).jpg
+   :alt: ERD Diagram
+   :align: center
+   :width: 600px
 
 
 Table Descriptions
