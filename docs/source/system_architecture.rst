@@ -22,6 +22,8 @@ Client-Server system architecture:
 Components In Use:
 -------------
 
+The server comprises of the following components in order for the application to function (in order to fetch data from database and come up with a http server response):
+
 - Subject Manager: Uses the fetchSubjects() backend function to fetch subject_id and subject_name from the subjects table in the database in order to fetch subjects
 
 - Topic Manager: Uses the fetchTopics() backend function to fetch topic_id and topic_name for matching subject_id from the topics table in the database in order to fetch topics for each subject
