@@ -18,8 +18,8 @@ Follow these steps to prepare your machine:
    Download and install PostgreSQL from postgresql.org <https://www.postgresql.org/download/>_.  
    After installation, create a new database for the project and verify that your config.py contains the correct connection settings.
 
-Running the Backend
--------------------
+Running The Backend (Start The Server):
+---------------------------------------
 
 1. **Navigate to the backend directory**  
    
@@ -27,7 +27,7 @@ bash
    cd backend
 
 2.**Install dependencies
-pip install psycopg2-binary schedule
+pip install psycopg2-binary and pip install schedule
 
 3.Configure the database connection
  Edit config.py and set your database host, name, user, and password.
