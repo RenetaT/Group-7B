@@ -10,6 +10,11 @@ The components have been slightly changed during implementation. Particular comp
 Client-Server system architecture:
 -----------------------------------
 
+.. image:: https://raw.githubusercontent.com/RenetaT/Group-7B/refs/heads/main/docs/images/system_architecture_cw2.jpg
+   :alt: System Architecture Diagram
+   :align: center
+   :width: 600px
+
 
 
 
