@@ -74,3 +74,9 @@ The fetchSubjects gets a connection from the connection pool (group of pre-estab
 After the fetchSubjects is called, the server prepares a http response. The server sends a header of http status 200 via `self.send_response(200)` to show the request was successful. To prevent cross-origin-access-sharing error, a header is added to allow cross-origin requests from any domain. The `self.send_header('Content-type','application/json')` specifies that the response content type is JSON. The subjects array that was fetched from the database is serialised into JSON string via `self.wfile.write(json.dumps(subjects, indent = 2).encode('utf-8'))`. JSON is used which is sent to the frontend, for it easier to display the JSON (this can be done via localhost:8000/subjects) and it is easy to extract data from JSON and handle the data in the frontend etc. The response is sent to the client with the payload of the data being in JSON format which can display the subjects to the user on the frontend user interface.
 
 
+Methodology used during implementation:
+-----------------------------------------
+
+The group opted for an incremental methodology while developing the application in order to ensure continuous progress, early detection of issues, and iterative refinement of features. This approach allowed the team to break the project into smaller, manageable modules, deliver functional components incrementally, and gather feedback at each stage. By doing so, the team could adapt to changing requirements, improve the quality of the application, and ensure that critical functionalities are each working at an early stage and each are tested.
+
+
